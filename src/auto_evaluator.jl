@@ -7,10 +7,18 @@ const HARD_BRAKE_INDEX = 4
 function build_generators_evaluator(flags)
     feature_dim = 0
     flags["num_scenarios"] = 1
-    flags["num_monte_carlo_runs"] = 5
+    flags["num_monte_carlo_runs"] = 100
     flags["prime_time"] = 1.
     flags["sampling_period"] = .1
     flags["sampling_time"] = 5.
+    flags["min_num_vehicles"] = 20
+    flags["max_num_vehicles"] = 20
+    flags["num_lanes"] = 3
+    flags["roadway_length"] = 300.
+    flags["roadway_radius"] = 50.
+    flags["response_time"] = .4
+    flags["min_base_speed"] = 15.
+    flags["max_base_speed"] = 25.
 
     # roadway
     roadway = gen_stadium_roadway(flags["num_lanes"], 

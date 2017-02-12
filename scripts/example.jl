@@ -8,7 +8,7 @@ Description:
 lse = build_evaluator("auto")
 num_runs = 5
 param_1_values = linspace(0., 2., num_runs)
-param_2_values = linspace(0, 2., num_runs)
+param_2_values = linspace(0, .5, num_runs)
 targets = zeros(num_runs, num_runs)
 for (i, x1) in enumerate(param_1_values)
     for (j, x2) in enumerate(param_2_values)
@@ -18,4 +18,4 @@ for (i, x1) in enumerate(param_1_values)
         toc()
     end
 end
-println(reshape(targets), (num_runs, num_runs))
+println(reshape(targets, (num_runs, num_runs)))
