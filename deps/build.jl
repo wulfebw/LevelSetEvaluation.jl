@@ -11,3 +11,6 @@ for url in urls
         println("Exception when cloning $(url): $(e)")  
     end
 end
+
+Pkg.build("AutomotiveDrivingModels")
+Pkg.build("AutoRisk")

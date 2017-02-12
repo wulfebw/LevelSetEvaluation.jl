@@ -12,6 +12,7 @@
 # install
 ```julia
 Pkg.clone("https://github.com/wulfebw/LevelSetEvaluation.jl.git")
+Pkg.build("LevelSetEvaluation")
 ```
 
 # usage
