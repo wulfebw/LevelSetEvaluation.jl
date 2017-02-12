@@ -128,7 +128,7 @@ Args:
             - max: 2. m/s^2 
         params[1] = standard deviation of lateral acceleration (lat_σ)
             - min: 0. m/s^2
-            - max: 2. m/s^2
+            - max: .5 m/s^2
     - seed: random seed from which to generate the scene
 
 Returns:
