@@ -1,7 +1,6 @@
 __precompile__(true)
 module LevelSetEvaluation
 
-
 using Reexport
 @reexport using AutoRisk
 # manually include an AutoRisk config script
