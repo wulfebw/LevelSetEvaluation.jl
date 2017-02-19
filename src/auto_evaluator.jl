@@ -137,10 +137,10 @@ Returns:
         - max: 1.
 """
 function evaluate_parameters!(lse::AutoLevelSetEvaluator, 
-        params::Array{Float64}, seed::Int = 1)
+        params::Array{Float64}, scenario_seed::Int = 1, simulation_seed::Int = 1)
     update_parameters!(lse, params[1], params[2])
-    reset!(lse.scene_gen, lse.scene, lse.roadway, seed)
-    reset!(lse.behavior_gen, lse.models, lse.scene, seed)
-    evaluate!(lse.eval, lse.scene, lse.models, lse.roadway, seed)
+    reset!(lse.scene_gen, lse.scene, lse.roadway, scenario_seed)
+    reset!(lse.behavior_gen, lse.models, lse.scene, scenario_seed)
+    evaluate!(lse.eval, lse.scene, lse.models, lse.roadway, simulation_seed)
     return mean(lse.eval.agg_targets, 2)[HARD_BRAKE_INDEX]
 end

@@ -13,7 +13,7 @@ targets = zeros(num_runs, num_runs)
 for (i, x1) in enumerate(param_1_values)
     for (j, x2) in enumerate(param_2_values)
         tic()
-        targets[i, j] = evaluate_parameters!(lse, [x1,x2])
+        targets[i, j] = evaluate_parameters!(lse, [x1,x2], 1, 1)
         print(@sprintf("input: (%03f, %03f)\toutput: %05f\t", x1, x2, targets[i,j]))
         toc()
     end
