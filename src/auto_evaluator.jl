@@ -129,7 +129,8 @@ Args:
         params[1] = standard deviation of lateral acceleration (lat_σ)
             - min: 0. m/s^2
             - max: .5 m/s^2
-    - seed: random seed from which to generate the scene
+    - scenario_seed: random seed from which to generate the scenario
+    - simulation_seed: random seed to use for simulating the scenario
 
 Returns:
     - value of the target (hard brake probability)
