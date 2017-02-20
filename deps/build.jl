@@ -15,3 +15,4 @@ end
 
 Pkg.build("AutomotiveDrivingModels")
 Pkg.build("AutoRisk")
+Pkg.build("Coord")
