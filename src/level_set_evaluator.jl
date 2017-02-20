@@ -10,6 +10,8 @@ evaluate_parameters!(evaluator::LevelSetEvaluator, params::Array{Float64}, scena
 function build_evaluator(evaluator_type::String)
     if evaluator_type == "auto"
         return AutoLevelSetEvaluator()
+    elseif evaluator_type == "uav"
+        return UAVLevelSetEvaluator()
     else
         throw(ArgumentError("invalid evaluator_type $(evaluator_type)"))
     end

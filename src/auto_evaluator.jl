@@ -60,7 +60,7 @@ function build_generators_evaluator(flags)
         (flags["prime_time"] + flags["sampling_time"]) / flags["sampling_period"]))
     rec = SceneRecord(max_num_scenes, flags["sampling_period"], 
         flags["max_num_vehicles"])
-    features = Array{Float64}(feature_dim, flags["max_num_vehicles"])
+    features = Array{Float64}(feature_dim, 1, flags["max_num_vehicles"])
     targets = Array{Float64}(flags["target_dim"], flags["max_num_vehicles"])
     agg_targets = Array{Float64}(flags["target_dim"], flags["max_num_vehicles"])
     ext = EmptyExtractor()
